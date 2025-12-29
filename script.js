@@ -3,11 +3,14 @@
 let secretNumber = 0;
 // ตัวแปรนับจํานวนครั้งที่ทาย
 let attemptCount = 0;
+<<<<<<< HEAD
 // ฟังก์ชันอัปเดตจํานวนครั้ง
 function updateDisplay() {
   const attemptsContainer = document.getElementById("attemptsContainer");
   attemptsContainer.textContent = `ทายแล้ว: ${attemptCount} ครั้ง`;
 }
+=======
+>>>>>>> 4c43136b758d8671dfda71f330743787342369db
 // ฟังก์ชันเริ่มเกมใหม่
 function initializeGame() {
   secretNumber = Math.floor(Math.random() * 100) + 1;
@@ -19,6 +22,7 @@ function checkGuess() {
   const guessInput = document.getElementById("guessInput");
   const guessValue = parseInt(guessInput.value);
   const resultContainer = document.getElementById("resultContainer");
+<<<<<<< HEAD
   // Validation: ตรวจสอบว่าใส่ตัวเลขหรือไม่
   if (isNaN(guessValue) || guessInput.value === "") {
     resultContainer.innerHTML = `
@@ -58,12 +62,43 @@ function checkGuess() {
  </div>
  `;
   }
+=======
+  attemptCount++;
+  if (guessValue === secretNumber) {
+    resultContainer.innerHTML = `
+ <div class="alert alert-success" role="alert">
+ <h5>✓ ถูกต้อง!</h5>
+ <p>คุณทายถูกในครั้งที่ ${attemptCount}</p>
+ </div>
+ `;
+  } else if (guessValue > secretNumber) {
+    resultContainer.innerHTML = `
+ <div class="alert alert-warning" role="alert">
+ ↓ ตัวเลขสูงไป
+ </div>
+ `;
+  } else {
+    resultContainer.innerHTML = `
+ <div class="alert alert-info" role="alert">
+ ↑ ตัวเลขตํ่าไป
+ </div>
+ `;
+  }
+>>>>>>> 4c43136b758d8671dfda71f330743787342369db
   updateDisplay();
   guessInput.value = "";
   guessInput.focus();
 }
+<<<<<<< HEAD
 // filepath: script.js
 // ...existing code...
+=======
+// ฟังก์ชันอัปเดตจํานวนครั้ง
+function updateDisplay() {
+  const attemptsContainer = document.getElementById("attemptsContainer");
+  attemptsContainer.textContent = `ทายแล้ว: ${attemptCount} ครั้ง`;
+}
+>>>>>>> 4c43136b758d8671dfda71f330743787342369db
 // ฟังก์ชันเริ่มเกมใหม่
 function resetGame() {
   initializeGame();
@@ -73,6 +108,7 @@ function resetGame() {
 }
 // เริ่มเกมเมื่อโหลดหน้า
 window.addEventListener("load", initializeGame);
+<<<<<<< HEAD
 // เพิ่มการ select text เมื่อคลิก input
 document.addEventListener("DOMContentLoaded", function () {
   const guessInput = document.getElementById("guessInput");
@@ -90,3 +126,5 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 });
+=======
+>>>>>>> 4c43136b758d8671dfda71f330743787342369db
