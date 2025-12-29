@@ -62,6 +62,8 @@ function updateDisplay() {
   const attemptsContainer = document.getElementById("attemptsContainer");
   attemptsContainer.textContent = `ทายแล้ว: ${attemptCount} ครั้ง`;
 }
+// filepath: script.js
+// ...existing code...
 // ฟังก์ชันเริ่มเกมใหม่
 function resetGame() {
   initializeGame();
