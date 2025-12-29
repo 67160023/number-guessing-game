@@ -57,7 +57,6 @@ function checkGuess() {
   guessInput.value = "";
   guessInput.focus();
 }
-
 // ฟังก์ชันอัปเดตจํานวนครั้ง
 function updateDisplay() {
   const attemptsContainer = document.getElementById("attemptsContainer");
